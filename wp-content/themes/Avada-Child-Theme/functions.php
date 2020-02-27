@@ -46,7 +46,7 @@ function wp_custom_post_type_location() {
         /*
         * Différentes options supplémentaires
         */
-        'show_in_rest' => true,
+        'show_in_rest'        => true,
         'hierarchical'        => false,
         'public'              => true,
         'has_archive'         => true,
