@@ -63,7 +63,7 @@ h3 {
 }
 
 .archive-detail{
-    height: 300px;
+    height: 350px;
     background-position: center !important;
     background-size: cover !important;
     padding: 0 !important;
@@ -71,4 +71,14 @@ h3 {
 
 .archive-detail:hover .link{
     background-color: rgba(0,0,0,0.6);
+}
+
+.characteristic{
+    padding: 20px 5px;
+    border-top: 0.5px solid #d6d4d4;
+    border-bottom: 0.5px solid #d6d4d4;
+}
+
+.fusion-button-black {
+    border: 1px solid black !important;
 }

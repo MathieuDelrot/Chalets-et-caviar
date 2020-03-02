@@ -20,21 +20,20 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="col-md-6">
                 <h1><?php the_title(); ?></h1>
                 <p><?php the_field('description'); ?></p>
-                <h2>Prix : <b><?php the_field('prix'); ?> €</b></h2>
+                <div class="row characteristic">
+                    <div class="col-md-12">
+                    <h3>Prix : <b><?php the_field('prix'); ?> €</b></h3>
+                    <h3>Surface : <b><?php the_field('surface'); ?> m<sup>2</sup></b></h3>
+                    <h3>Chambres : <b><?php the_field('nombre_de_chambres'); ?></b></h3>
+                    <h3>Salles de bains : <b><?php the_field('nombre_de_salles_de_bains'); ?></b></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <a class="fusion-button fusion-button-black button-flat fusion-button-default-size button-custom button-1 fusion-button-default-span fusion-button-default-type" target="_self" href="contact/"><span class="fusion-button-text">Contactez-nous</span></a>
+                </div>
             </div>
             <div class="col-md-6">
                 <?php the_post_thumbnail( 'medium_large' ); ?>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>Surface : <b><?php the_field('surface'); ?> m<sup>2</sup></b></h3>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Nombre de chambres : <b><?php the_field('nombre_de_chambres'); ?></b></h3>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Nombre de salles de bains : <b><?php the_field('nombre_de_salles_de_bains'); ?></b></h3>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

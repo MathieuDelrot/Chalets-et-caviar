@@ -26,14 +26,18 @@
                         <div class="link">
                             <div class="d-flex justify-content-around archive-header">
                                 <h2 class="title"><?php the_title(); ?></h2>
-                                <?php if (get_field('prix')) { ?>
-                                    <h3 class="align-self-center"><b><?php the_field('prix'); ?> €</b></h3>
-                                <?php } else { ?>
+                                <?php if (get_field('prix_location')) { ?>
                                     <h3 class="align-self-center"><b><?php the_field('prix_location'); ?> € / sem</b></h3>
+                                <?php } else { ?>
+                                    <h3 class="align-self-center"><b><?php the_field('prix'); ?> €</b></h3>
                                 <?php } ?>
                             </div>
                             <div class="detail text-center d-flex justify-content-around">
-                                <h5><i class="fas fa-users"></i> <?php the_field('nombre_de_place'); ?></h5>
+                                <?php if (get_field('nombre_de_place')) { ?>
+                                    <h5><i class="fas fa-users"></i> <?php the_field('nombre_de_place'); ?></h5>
+                                <?php } else { ?>
+                                    <h5><i class="fas fa-arrows-alt"></i> <?php the_field('surface'); ?> m<sup>2</sup></h5>
+                                <?php } ?>
                                 <h5><i class="fas fa-bed"></i> <?php the_field('nombre_de_chambres'); ?></h5>
                                 <h5><i class="fas fa-bath"></i> <?php the_field('nombre_de_salles_de_bains'); ?></h5>
                             </div>
