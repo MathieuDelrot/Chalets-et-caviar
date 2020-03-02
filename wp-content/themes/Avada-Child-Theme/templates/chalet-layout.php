@@ -16,7 +16,7 @@
                 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
                 ?>
 
-                <?php if ($i%$max_columns==0) { // if counter is multiple of 3 ?>
+                <?php if ($i%$max_columns==0) { ?>
                     <div class="row">
                 <?php } ?>
 
@@ -26,7 +26,11 @@
                         <div class="link">
                             <div class="d-flex justify-content-around archive-header">
                                 <h2 class="title"><?php the_title(); ?></h2>
-                                <h3 class="align-self-center"><b><?php the_field('prix_a_la_semaine'); ?> € / sem</b></h3>
+                                <?php if (get_field('prix')) { ?>
+                                    <h3 class="align-self-center"><b><?php the_field('prix'); ?> €</b></h3>
+                                <?php } else { ?>
+                                    <h3 class="align-self-center"><b><?php the_field('prix_location'); ?> € / sem</b></h3>
+                                <?php } ?>
                             </div>
                             <div class="detail text-center d-flex justify-content-around">
                                 <h5><i class="fas fa-users"></i> <?php the_field('nombre_de_place'); ?></h5>

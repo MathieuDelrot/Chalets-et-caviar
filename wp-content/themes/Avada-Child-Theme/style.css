@@ -18,6 +18,18 @@ h3 {
     margin-bottom: 20px;
 }
 
+.fusion-logo img{
+    height: 50px;
+}
+
+.fusion-menu-description{
+    display: none !important;
+}
+
+.fusion-menu a:hover {
+    text-decoration: none;
+}
+
 /*ARCHIVES*/
 .archive h5{
     margin: 5px;

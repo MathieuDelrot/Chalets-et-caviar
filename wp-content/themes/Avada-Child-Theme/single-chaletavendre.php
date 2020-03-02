@@ -20,13 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="col-md-6">
                 <h1><?php the_title(); ?></h1>
                 <p><?php the_field('description'); ?></p>
-                <h2>Prix à la semaine : <b><?php the_field('prix_location'); ?> €</b></h2>
+                <h2>Prix : <b><?php the_field('prix'); ?> €</b></h2>
             </div>
             <div class="col-md-6">
                 <?php the_post_thumbnail( 'medium_large' ); ?>
                 <div class="row">
                     <div class="col-md-4">
-                        <h3>Nombre de places : <b><?php the_field('nombre_de_place'); ?></b></h3>
+                        <h3>Surface : <b><?php the_field('surface'); ?> m<sup>2</sup></b></h3>
                     </div>
                     <div class="col-md-4">
                         <h3>Nombre de chambres : <b><?php the_field('nombre_de_chambres'); ?></b></h3>
